@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>貪食蛇遊戲</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 開始畫面（加入按鈕） -->
+  <div id="startScreen" class="overlay">
+    <h1>🎮 貪食蛇遊戲</h1>
+    <button onclick="startGame()">開始遊戲</button>
+  </div>
+
+  <!-- 遊戲中 UI -->
+  <div id="gameUI">
+    <p>得分：<span id="score">0</span></p>
+  </div>
+
+  <!-- 結束畫面 -->
+  <div id="gameOverScreen" class="overlay" style="display: none;">
+    <h1>遊戲結束</h1>
+    <p id="finalScore"></p>
+    <button onclick="restartGame()">重新開始</button>
+  </div>
+
+  <!-- 遊戲畫布 -->
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
