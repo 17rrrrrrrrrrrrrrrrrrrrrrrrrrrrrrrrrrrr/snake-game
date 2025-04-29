@@ -8,15 +8,16 @@
 </head>
 <body>
 
-  <!-- 開始畫面（加入按鈕） -->
+  <!-- 開始畫面 -->
   <div id="startScreen" class="overlay">
     <h1>🎮 貪食蛇遊戲</h1>
     <button onclick="startGame()">開始遊戲</button>
   </div>
 
-  <!-- 遊戲中 UI -->
+  <!-- 遊戲上方操作列 -->
   <div id="gameUI">
     <p>得分：<span id="score">0</span></p>
+    <button id="fullscreenBtn" onclick="toggleFullscreen()">全螢幕</button>
   </div>
 
   <!-- 結束畫面 -->

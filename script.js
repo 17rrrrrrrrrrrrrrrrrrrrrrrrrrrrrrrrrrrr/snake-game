@@ -109,4 +109,19 @@ document.addEventListener("keydown", e => {
       if (direction.x === 0) direction = { x: 1, y: 0 };
       break;
   }
-});
+});// 全部舊的內容保持一樣...
+
+// 加上這段：全螢幕切換功能
+function toggleFullscreen() {
+  const elem = document.documentElement;
+
+  if (!document.fullscreenElement) {
+    elem.requestFullscreen().catch(err => {
+      alert(`無法全螢幕: ${err.message}`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+}
+
+// 剩下的遊戲邏輯一樣，不需要改變
